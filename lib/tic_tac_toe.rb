@@ -21,19 +21,19 @@ class TicTacToe
     puts " #{board[6]} | #{board[7]} | #{board[8]} "
   end
   def input_to_index(string)
-    string.to_i - 1     
+    string.to_i - 1
   end
-  def move(index, player) 
-    @board[index] = player  
+  def move(index, player)
+    @board[index] = player
   end
   def position_taken?(index)
-    @board[index] == 'X' || @board[index] == 'O'     
+    @board[index] == 'X' || @board[index] == 'O'
   end
   def valid_move?(index)
     index.between?(0,8) && !position_taken?(index)
   end
   def turn_count
-    count = 0 
+    count = 0
     @board.each do |x|
       if x == 'X' || x == 'O'
         count += 1
